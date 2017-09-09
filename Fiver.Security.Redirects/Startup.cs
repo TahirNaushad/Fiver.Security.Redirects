@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Fiver.Security.Redirects
 {
@@ -15,8 +14,7 @@ namespace Fiver.Security.Redirects
 
         public void Configure(
             IApplicationBuilder app, 
-            IHostingEnvironment env, 
-            ILoggerFactory loggerFactory)
+            IHostingEnvironment env)
         {
             app.UseExceptionHandler("/Home/Exception");
             app.UseMvcWithDefaultRoute();
